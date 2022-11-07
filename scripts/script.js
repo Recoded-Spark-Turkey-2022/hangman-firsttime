@@ -1,12 +1,24 @@
-const arr = [];
+
+
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
   .then((data) => fetchDamnData(data));
 function fetchDamnData(damnData){
-  const word = damnData[0].split("");
-  arr.push(word);}
-console.log(arr);
+  const words = damnData.toString();
+  const letters = words.split('');
+ console.log(letters)
+
+
+  randomWords.forEach((letter) => {
+    let emptyBlanks = document.createElement('span');
+    emptyBlanks.setAttribute('class', 'emptyBlanks');
+    emptyBlanks.innerText= letter;
+    let letterBlanks = document.querySelector('.letterBlanks');
+    letterBlanks.appendChild(emptyBlanks);
+  })}
+console.log(randomWords);
+
 
 
 function generateAlphabet() {
@@ -19,9 +31,12 @@ function generateAlphabet() {
     btns.appendChild(buttons);});}
 generateAlphabet();
 
+
 document.addEventListener("click", (e) => {
   if (e.target.className === "buttonBoxes"){
       e.target.classList.add("clicked");
     let theClickedLetter = e.target.innerText;
     console.log(theClickedLetter);
     }})
+
+
