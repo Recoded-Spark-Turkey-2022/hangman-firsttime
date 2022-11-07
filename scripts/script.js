@@ -10,20 +10,18 @@ function fetchDamnData(damnData){
  console.log(letters)
 
 
-  randomWords.forEach((letter) => {
+  letters.forEach((letter) => {
     let emptyBlanks = document.createElement('span');
     emptyBlanks.setAttribute('class', 'emptyBlanks');
     emptyBlanks.innerText= letter;
     let letterBlanks = document.querySelector('.letterBlanks');
     letterBlanks.appendChild(emptyBlanks);
   })}
-console.log(randomWords);
-
 
 
 function generateAlphabet() {
   let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-  alphabet.toUpperCase().split(" ").map((letter) => {
+  alphabet.toUpperCase().split(" ").forEach((letter) => {
     const btns = document.querySelector(".btns");
     const buttons = document.createElement("button");
     buttons.setAttribute('class', 'buttonBoxes');
