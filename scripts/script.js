@@ -2,10 +2,12 @@
 let words;
 let letters;
 let clickedLetter;
+let selectedLetter;
 let damnData;
 let wordStatus;
 let wrongGuesses = 0;
 let maxWrong = 6;
+let alphabetArray;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -13,14 +15,15 @@ fetch(`https://random-word-api.herokuapp.com/word?number=1`)
 function fetchDamnData(damnData){
   words = Array.from(damnData).toString();
   letters = words.split('');
+  console.log(letters);
    
 function generateAlphabet(){
   let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-  alphabet.toUpperCase().split(" ").forEach((letter)=>{
+  let alphabetArray = alphabet.split(' ').forEach((letter)=>{
     const btns = document.querySelector(".btns");
     const buttons = document.createElement("button");
     buttons.setAttribute('class', 'buttonBoxes');
-    buttons.innerText = letter;
+    buttons.innerText = letter.toUpperCase();
     btns.appendChild(buttons);});}
   generateAlphabet();
 
@@ -29,7 +32,8 @@ letters.forEach(()=>{
   emptyBlanks.setAttribute('class', 'emptyBlanks');
   emptyBlanks.innerHTML= " __ ";
   let letterBlanks = document.querySelector('.letterBlanks');
-  letterBlanks.appendChild(emptyBlanks);})
+  letterBlanks.appendChild(emptyBlanks);})}
+
      
 document.addEventListener("click", (e) => {
   let wordStatus = false;
@@ -44,6 +48,8 @@ document.addEventListener("click", (e) => {
       selectedLetter.forEach((span,spanIndex)=>{
   if (index === spanIndex){
       span.innerText = clickedLetter;};})}})}
+
+      console.log(wordStatus);
         
   if (wordStatus !== true){
       wrongGuesses++;
@@ -53,10 +59,13 @@ document.addEventListener("click", (e) => {
       let gameOver = document.createElement('div');
       gameOverMessage = document.createTextNode (`You Killed The Man, The word is ${words}`);
       gameOver.appendChild(gameOverMessage);
-      document.body.appendChild(gameOver);}
+      document.body.appendChild(gameOver);
+      reset()}
 
+      function reset(){
 
-      })}
+      }
+      })
   
     
 
