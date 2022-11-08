@@ -6,6 +6,21 @@ body {
    
 }
 
+.row {
+    display: flex;
+    padding-top: 100px;
+  }
+
+
+.container {
+    margin: 20px auto;
+    width: 1000px
+  }
+
+.restart {
+    display: flex;
+    justify-content: center;
+}
 
 #header {
     font-family: 'Merriweather Sans', sans-serif;
@@ -24,18 +39,21 @@ body {
 }
 
 .btns {
-    background-color: pink;
+    background-color: rgba(227, 130, 113, 0);
     flex: 1;
     padding: 15px;
     text-align: center;
+    
 }
 
 .buttonBoxes {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Shalimar', cursive;
     width: 55px;
     height: 55px;
     display: inline-block;
-    background-color: #009688;
-    color: #FFF;
+    background-color: #e16615e1;
+    color: beige;
     font-size: 24px;
     margin-right: 10px;
     line-height: 55px;
@@ -43,6 +61,10 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 10px; 
+    border: solid rgb(201, 124, 124);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
+      0 0 25px rgba(228, 15, 54, 0.911);
 }
 
 .clicked {
@@ -56,15 +78,24 @@ body {
     border-color: brown;
     display: contents;
     justify-content: center;
+    
 }
 
 .letterBlanks {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Shalimar', cursive;
+    font-size: 35px;
+    color: beige;
     border-radius: 10px;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
+      0 0 25px rgba(228, 15, 54, 0.911);
+      padding-bottom: 20px;
+      padding-top: 20px;
+    
 }
 
 #entrance {
