@@ -1,8 +1,9 @@
 
 let words;
-let letters;
+let letters = '';
 let clickedLetter;
 let damnData;
+let wordStatus = null;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -34,10 +35,19 @@ function fetchDamnData(damnData){
     if (e.target.className === "buttonBoxes"){
         e.target.classList.add("clicked");
       let clickedLetter = e.target.innerText;
-     console.log(clickedLetter);}
-
-
+    //  console.log(clickedLetter);
+    let selectedLetter = document.querySelectorAll('.emptyBlanks');
+     letters.forEach((letter ,index)=>{
+      if (clickedLetter.toUpperCase() === letter.toUpperCase() ){
+      selectedLetter.forEach(( span, spanIndex) => {
+        if ( index === spanIndex) {
+          span.innerText = clickedLetter;
+        };
+      })}
+      
+     })}
      
+
     
     })
   }
