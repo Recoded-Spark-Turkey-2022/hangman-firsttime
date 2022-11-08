@@ -3,8 +3,9 @@ let words;
 let letters;
 let clickedLetter;
 let damnData;
-let wrongGuesses = 0;
 let wordStatus;
+let wrongGuesses = 0;
+let maxWrong = 6;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -47,7 +48,12 @@ document.addEventListener("click", (e) => {
   if (wordStatus !== true){
       wrongGuesses++;
       document.getElementById('hangman').src = './images/' + wrongGuesses + '.jpg';}
-      
+  
+  if (wrongGuesses === maxWrong){
+      let gameOver = document.createElement('div');
+      gameOverMessage = document.createTextNode (`You Killed The Man, The word is ${words}`);
+      gameOver.appendChild(gameOverMessage);
+      document.body.appendChild(gameOver);}
 
 
       })}
