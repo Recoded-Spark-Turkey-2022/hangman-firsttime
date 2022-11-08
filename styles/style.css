@@ -3,30 +3,32 @@
     display: flex;
     justify-content: center;
     justify-content: space-between;
-
 }
 
 .buttonBoxes {
     background-color: rgba(221, 113, 113, 0.361);
     box-shadow: 10px;
-    font-size: 30px;
-    
-  
+    font-size: 30px;  
 }
 
 .clicked {
     background-color: grey;
+    pointer-events: none;
 }
 
 .emptyBlanks {
     background-color: rgb(184, 184, 20);
     border-radius: 10px;
     border-color: brown;
+    display: contents;
+    justify-content: center;
 }
 
 .letterBlanks {
-    background-color: aqua;
     border-radius: 10px;
     border-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
