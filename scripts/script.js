@@ -28,7 +28,7 @@ function generateAlphabet() {
   letters.forEach(() => {
     let emptyBlanks = document.createElement("span");
     emptyBlanks.setAttribute("class", "emptyBlanks");
-    emptyBlanks.innerHTML = " __ ";
+    emptyBlanks.innerHTML = " _ ";
     let letterBlanks = document.querySelector(".letterBlanks");
     letterBlanks.appendChild(emptyBlanks); });
 
