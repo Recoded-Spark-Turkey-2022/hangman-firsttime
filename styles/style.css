@@ -14,10 +14,11 @@ body {
 
 .container {
     margin: 20px auto;
-    width: 1000px
+    width: 1000px;
+    
   }
 
-.restart {
+.playagain {
     display: flex;
     justify-content: center;
 }
@@ -126,47 +127,49 @@ body {
   .img-container {
     height: 600px;
     width: 600px;
+    display: inline-block;
   }
   
   img {
     height: 120px;
     width: 120px;
+    display: inline-block;
   }
 
 
   #img1 {
-   
+   display: inline-block;
   }
   
   #img2 {
- 
+    display: inline-block;
   }
   
   #img3 {
-    
+    display: inline-block;
   }
   
   #img4 {
-   
+    display: inline-block;
   }
   
   #img5 {
-   
+    display: inline-block;
   }
   
   #img6 {
-    
+    display: inline-block;
   }
   
   #img7 {
-  
+    display: inline-block;
   }
   
   #img8 {
-  
+    display: inline-block;
   }
   
   #img9 {
-   
+    display: inline-block;
   }
   
