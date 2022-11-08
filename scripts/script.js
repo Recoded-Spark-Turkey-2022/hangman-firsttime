@@ -6,7 +6,9 @@ fetch(`https://random-word-api.herokuapp.com/word?number=1`)
 function fetchDamnData(damnData) {
   const word = damnData[0].split("");
   arr.push(word);
+  return word;
 }
+
 console.log(arr);
 function generateAlphabet() {
   let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
