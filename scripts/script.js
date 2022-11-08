@@ -1,10 +1,9 @@
 let words;
 let letters;
 let clickedLetter;
-let damnData;
 let wordStatus;
 let wrongGuesses = 0;
-let maxWrong = 6;
+let maxWrong = 9;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -73,39 +72,7 @@ function fetchDamnData(damnData) {
       }
     });
   });
-
-  // document.addEventListener("click", (e) => {
-  //   let wordStatus = false;
-  //   if (e.target.className === "buttonBoxes") {
-  //     e.target.classList.add("clicked");
-  //     let clickedLetter = e.target.innerText;
-  //     let selectedLetter = document.querySelectorAll(".emptyBlanks");
-
-  //     letters.forEach((letter, index) => {
-  //       if (clickedLetter.toUpperCase() === letter.toUpperCase()) {
-  //         wordStatus = true;
-  //         selectedLetter.forEach((span, spanIndex) => {
-  //           if (index === spanIndex) {
-  //             span.innerText = clickedLetter;
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-
-  //   if (wordStatus !== true) {
-  //     wrongGuesses++;
-  //     document.getElementById("hangman").src =
-  //       "./images/" + wrongGuesses + ".jpg";
-  //   }
-
-  //   if (wrongGuesses === maxWrong) {
-  //     let gameOver = document.createElement("div");
-  //     gameOverMessage = document.createTextNode(
-  //       `You Killed The Man, The word is ${words}`
-  //     );
-  //     gameOver.appendChild(gameOverMessage);
-  //     document.body.appendChild(gameOver);
-  //   }
-  // });
+}
+function myFunction() {
+  window.location.reload();
 }
