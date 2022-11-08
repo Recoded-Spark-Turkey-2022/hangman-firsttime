@@ -61,3 +61,49 @@
     animation: action 1s infinite alternate;
     box-shadow: 6px 10px 32px -13px rgba(94, 90, 94, 1);
   }
+
+  .img-container {
+    height: 600px;
+    width: 600px;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  #img1 {
+    border: 3px solid red;
+  }
+  
+  #img2 {
+    border: 3px solid pink;
+  }
+  
+  #img3 {
+    border: 3px solid green;
+  }
+  
+  #img4 {
+    border: 3px solid yellow;
+  }
+  
+  #img5 {
+    border: 3px solid orange;
+  }
+  
+  #img6 {
+    border: 3px solid purple;
+  }
+  
+  #img7 {
+    border: 3px solid darkgray;
+  }
+  
+  #img8 {
+    border: 3px solid fuchsia;
+  }
+  
+  #img9 {
+    border: 3px solid tomato;
+  }
+  
