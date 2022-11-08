@@ -1,9 +1,12 @@
 
 let words;
-let letters = '';
+let letters;
 let clickedLetter;
 let damnData;
-let wordStatus = null;
+let wrongGuesses = 0;
+let wordStatus;
+
+
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -29,26 +32,34 @@ function fetchDamnData(damnData){
     emptyBlanks.innerHTML= " __ ";
     let letterBlanks = document.querySelector('.letterBlanks');
     letterBlanks.appendChild(emptyBlanks);})
+    
 
+   
+    
    document.addEventListener("click", (e) => {
+    let wordStatus = false;
     if (e.target.className === "buttonBoxes"){
         e.target.classList.add("clicked");
       let clickedLetter = e.target.innerText;
       let selectedLetter = document.querySelectorAll('.emptyBlanks');
      letters.forEach((letter ,index)=>{
       if (clickedLetter.toUpperCase() === letter.toUpperCase() ){
+        wordStatus = true;
       selectedLetter.forEach(( span, spanIndex) => {
         if ( index === spanIndex) {
-          span.innerText = clickedLetter;
-        };
-      })}
-      
-     })}
-     
-
+          span.innerText = clickedLetter;};})}
+        
+        
+        }
+       
+        
+        
+        )}
+        console.log(wordStatus);
+      })
     
-    })
-  }
+      }
+  
     
 
    
