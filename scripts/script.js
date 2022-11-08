@@ -51,11 +51,11 @@ function fetchDamnData(damnData){
         
         
         }
-       
-        
-        
         )}
-        console.log(wordStatus);
+        if (wordStatus !== true ){
+          wrongGuesses++;
+          console.log(wrongGuesses);
+        }
       })
     
       }
