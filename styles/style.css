@@ -1,0 +1,66 @@
+#header {
+    display: flex;
+    justify-content: center;
+}
+.pos{
+    position:absolute;
+    left: 0%;
+    right: 75%;
+}
+.btns {
+    background-color: lightsalmon ;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.buttonBoxes {
+    background-color: brown;
+    box-shadow: 10px;
+    font-size: 30px;  
+    border-bottom: 5px solid rgb(174, 127, 9);
+    font-style: italic;
+    width: 50px;
+    color: rgb(255, 132, 0);
+   
+
+}
+
+.clicked {
+    background-color: grey;
+    pointer-events: none;
+    
+    
+}
+
+.emptyBlanks {
+    background-color: rgb(184, 184, 20);
+    border-radius: 10px;
+    border-color: brown;
+    display: contents;
+    justify-content: center;
+    width: 200px;
+
+}
+
+.letterBlanks {
+    border-radius: 10px;
+    border-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+body{
+    
+   
+background-image: url("https://static.vecteezy.com/system/resources/previews/007/482/498/original/wild-west-cowboy-background-free-vector.jpg");
+
+background-repeat: no-repeat;
+background-size: cover; 
+}
+
+h1{
+    font-size: 92px ;
+    color: rgb(69, 40, 4);
+}
