@@ -12,6 +12,7 @@ fetch(`https://random-word-api.herokuapp.com/word?number=1`)
 function fetchDamnData(damnData) {
   words = Array.from(damnData).toString();
   letters = words.split("");
+  console.log(letters);
 
   function generateAlphabet() {
     let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
@@ -22,6 +23,7 @@ function fetchDamnData(damnData) {
         const btns = document.querySelector(".btns");
         const buttons = document.createElement("button");
         buttons.setAttribute("class", "buttonBoxes");
+        buttons.setAttribute("id", `${letter}`);
         buttons.innerText = letter;
         btns.appendChild(buttons);
       });
@@ -35,39 +37,75 @@ function fetchDamnData(damnData) {
     let letterBlanks = document.querySelector(".letterBlanks");
     letterBlanks.appendChild(emptyBlanks);
   });
+  document.querySelectorAll(`.buttonBoxes`).forEach((button, index) => {
+    button.addEventListener("click", (e) => {
+      let wordStatus = false;
+      if (e.target.className === "buttonBoxes") {
+        e.target.classList.add("clicked");
+        let clickedLetter = e.target.innerText;
+        let selectedLetter = document.querySelectorAll(".emptyBlanks");
 
-  document.addEventListener("click", (e) => {
-    let wordStatus = false;
-    if (e.target.className === "buttonBoxes") {
-      e.target.classList.add("clicked");
-      let clickedLetter = e.target.innerText;
-      let selectedLetter = document.querySelectorAll(".emptyBlanks");
+        letters.forEach((letter, index) => {
+          if (clickedLetter.toUpperCase() === letter.toUpperCase()) {
+            wordStatus = true;
+            selectedLetter.forEach((span, spanIndex) => {
+              if (index === spanIndex) {
+                span.innerText = clickedLetter;
+              }
+            });
+          }
+        });
+      }
 
-      letters.forEach((letter, index) => {
-        if (clickedLetter.toUpperCase() === letter.toUpperCase()) {
-          wordStatus = true;
-          selectedLetter.forEach((span, spanIndex) => {
-            if (index === spanIndex) {
-              span.innerText = clickedLetter;
-            }
-          });
-        }
-      });
-    }
+      if (wordStatus !== true) {
+        wrongGuesses++;
+        document.getElementById("hangman").src =
+          "./images/" + wrongGuesses + ".jpg";
+      }
 
-    if (wordStatus !== true) {
-      wrongGuesses++;
-      document.getElementById("hangman").src =
-        "./images/" + wrongGuesses + ".jpg";
-    }
-
-    if (wrongGuesses === maxWrong) {
-      let gameOver = document.createElement("div");
-      gameOverMessage = document.createTextNode(
-        `You Killed The Man, The word is ${words}`
-      );
-      gameOver.appendChild(gameOverMessage);
-      document.body.appendChild(gameOver);
-    }
+      if (wrongGuesses === maxWrong) {
+        let gameOver = document.createElement("div");
+        gameOverMessage = document.createTextNode(
+          `You Killed The Man, The word is ${words}`
+        );
+        gameOver.appendChild(gameOverMessage);
+        document.body.appendChild(gameOver);
+      }
+    });
   });
+
+  // document.addEventListener("click", (e) => {
+  //   let wordStatus = false;
+  //   if (e.target.className === "buttonBoxes") {
+  //     e.target.classList.add("clicked");
+  //     let clickedLetter = e.target.innerText;
+  //     let selectedLetter = document.querySelectorAll(".emptyBlanks");
+
+  //     letters.forEach((letter, index) => {
+  //       if (clickedLetter.toUpperCase() === letter.toUpperCase()) {
+  //         wordStatus = true;
+  //         selectedLetter.forEach((span, spanIndex) => {
+  //           if (index === spanIndex) {
+  //             span.innerText = clickedLetter;
+  //           }
+  //         });
+  //       }
+  //     });
+  //   }
+
+  //   if (wordStatus !== true) {
+  //     wrongGuesses++;
+  //     document.getElementById("hangman").src =
+  //       "./images/" + wrongGuesses + ".jpg";
+  //   }
+
+  //   if (wrongGuesses === maxWrong) {
+  //     let gameOver = document.createElement("div");
+  //     gameOverMessage = document.createTextNode(
+  //       `You Killed The Man, The word is ${words}`
+  //     );
+  //     gameOver.appendChild(gameOverMessage);
+  //     document.body.appendChild(gameOver);
+  //   }
+  // });
 }
