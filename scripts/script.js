@@ -15,7 +15,7 @@ function fetchDamnData(damnData){
    
 function generateAlphabet(){
   let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-  alphabet.toUpperCase().split(" ").forEach((letter) => {
+  alphabet.toUpperCase().split(" ").forEach((letter)=>{
     const btns = document.querySelector(".btns");
     const buttons = document.createElement("button");
     buttons.setAttribute('class', 'buttonBoxes');
@@ -23,7 +23,7 @@ function generateAlphabet(){
     btns.appendChild(buttons);});}
   generateAlphabet();
 
-letters.forEach(() => {
+letters.forEach(()=>{
   let emptyBlanks = document.createElement('span');
   emptyBlanks.setAttribute('class', 'emptyBlanks');
   emptyBlanks.innerHTML= " __ ";
@@ -36,17 +36,21 @@ document.addEventListener("click", (e) => {
       e.target.classList.add("clicked");
       let clickedLetter = e.target.innerText;
       let selectedLetter = document.querySelectorAll('.emptyBlanks');
-  letters.forEach((letter ,index)=>{
-  if (clickedLetter.toUpperCase() === letter.toUpperCase() ){
+
+  letters.forEach((letter,index)=>{
+  if (clickedLetter.toUpperCase() === letter.toUpperCase()){
       wordStatus = true;
-      selectedLetter.forEach(( span, spanIndex) => {
-  if (index === spanIndex) {
+      selectedLetter.forEach((span,spanIndex)=>{
+  if (index === spanIndex){
       span.innerText = clickedLetter;};})}})}
         
   if (wordStatus !== true){
-    wrongGuesses++;
-    console.log(wrongGuesses);
-        }})}
+      wrongGuesses++;
+      document.getElementById('hangman').src = './images/' + wrongGuesses + '.jpg';}
+      
+
+
+      })}
   
     
 
