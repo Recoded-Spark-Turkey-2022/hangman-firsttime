@@ -57,6 +57,9 @@ letters.forEach((letter, index) => {
       gameOver.appendChild(gameOverMessage);
       document.body.appendChild(gameOver);}});});}
 
+      function myFunction() {
+        window.location.reload();}
+
   
     
 
