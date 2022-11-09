@@ -8,9 +8,14 @@ body {
     /* border: solid pink;
     border-radius: 10px;
     box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red; */
-    width: 40%;
-    padding: 50px;
+    width: 40%; 
   }
+
+.headerBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
 
 #header {
     font-family: 'Merriweather Sans', sans-serif;
@@ -18,12 +23,14 @@ body {
     font-size: 40px;
     color: beige;
     display: flex;
-    text-align: center;
     justify-content: center;
     border: solid rgb(201, 124, 124);
     border-radius: 10px;
     box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
-      0 0 25px rgba(228, 15, 54, 0.911);   
+      0 0 25px rgba(228, 15, 54, 0.911);  
+    width: 30%;
+      
+      
 }
 
 .flex-container {
@@ -42,7 +49,6 @@ body {
     padding: 15px;
     height: 450px;
     text-align: center;
-    
 } 
 
 .buttonBoxes {
@@ -79,16 +85,16 @@ body {
 .letterBlanks {
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Shalimar', cursive;
-    font-size: 35px;
+    font-size: 50px;
     color: beige;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
-      0 0 25px rgba(228, 15, 54, 0.911);
-    padding-bottom: 20px;
-    padding-top: 20px;
+    margin-top: 30px;
+    /* box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
+      0 0 25px rgba(228, 15, 54, 0.911); */
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 #entrance {
@@ -258,7 +264,6 @@ body {
   #restart {
     display: flex;
     justify-content: center;
-    
     gap: 20px;
     cursor: pointer;
     background-color: rgba(64, 50, 38, 0.779);
@@ -272,7 +277,7 @@ body {
     font-family: "Shalimar", cursive;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 0px;
 }
 
@@ -281,7 +286,7 @@ body {
   justify-content: center;
   position: absolute;
   left: 24%;
-  top: 63%;
+  top: 60%;
   cursor: pointer;
   background-color: rgba(205, 79, 16, 0.471);
   border: solid rgba(146, 39, 6, 0.323);
@@ -298,8 +303,8 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  left: 20%;
-  top: 73%;
+  left: 10%;
+  top: 67%;
   cursor: pointer;
   background-color: rgba(205, 79, 16, 0.471);
   border: solid rgba(146, 39, 6, 0.323);
@@ -310,4 +315,12 @@ body {
   font-size: 30px;
   font-family: "Merriweather Sans", sans-serif;
   font-family: "Shalimar", cursive;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 35%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }

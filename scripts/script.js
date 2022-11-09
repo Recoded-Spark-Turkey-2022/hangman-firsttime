@@ -33,7 +33,7 @@ function returnDefinition() {
     .then(word => {singleWordDefinition = word[0].meanings[0].definitions[0].definition;
         
       
-    let needHelpbtn = document.querySelector('.needHelp').addEventListener('click', () => {
+    document.querySelector('.needHelp').addEventListener('click', () => {
       let wordDefinition = document.createElement('span');
       let hint = document.querySelector(".hint");
       wordDefinition.innerText = singleWordDefinition;
