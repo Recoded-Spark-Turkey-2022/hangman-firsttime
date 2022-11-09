@@ -14,6 +14,8 @@ function fetchDamnData(damnData) {
   letters = words.split("");
   console.log(letters);
 
+
+
 function generateAlphabet() {
   let alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
       alphabet.toUpperCase().split(" ").forEach((letter) => {
@@ -24,6 +26,14 @@ function generateAlphabet() {
         buttons.innerText = letter;
         btns.appendChild(buttons); });}
   generateAlphabet();
+
+function returnDefinition() {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${words}`)
+    .then(response => {return response.json();})
+    .then(word => {
+        var singleWordDefinition = word[0].meanings[0].definitions[0].definition;
+        console.log(singleWordDefinition);})};
+  returnDefinition();
 
   letters.forEach(() => {
     let emptyBlanks = document.createElement("span");
@@ -60,7 +70,11 @@ letters.forEach((letter, index) => {
 
   });});}
 
- 
+
+
+
+
+
 
       function restart() {
         window.location.reload();}
