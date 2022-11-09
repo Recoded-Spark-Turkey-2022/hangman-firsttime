@@ -4,7 +4,7 @@ let clickedLetter;
 let damnData;
 let wordStatus;
 let wrongGuesses = 0;
-let maxWrong = 6;
+let maxWrong = 9;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -47,18 +47,22 @@ letters.forEach((letter, index) => {
   if (index === spanIndex) {
     span.innerText = clickedLetter;}});}});}
 
+    
+
   if (wordStatus !== true) {
       wrongGuesses++;
-      wrongGuesses.forEach((mistake) => {
-        document.getElementById("img-container").src = "./images/" + wrongGuesses + ".jpg";})}
+      let imgContainer = document.querySelector(".imgContainer");
+      imgContainer.classList.add(`wrong-${wrongGuesses}`);}
 
   if (wrongGuesses === maxWrong) {
-      let gameOver = document.createElement("div");
-      gameOverMessage = document.createTextNode( `You Killed The Man, The word is ${words}`);
-      gameOver.appendChild(gameOverMessage);
-      document.body.appendChild(gameOver);}});});}
+     
+    }
 
-      function myFunction() {
+  });});}
+
+ 
+
+      function restart() {
         window.location.reload();}
 
   
