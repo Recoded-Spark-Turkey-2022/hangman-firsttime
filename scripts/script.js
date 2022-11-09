@@ -49,7 +49,8 @@ letters.forEach((letter, index) => {
 
   if (wordStatus !== true) {
       wrongGuesses++;
-      document.getElementById("img-container").src = "./images/" + wrongGuesses + ".jpg";}
+      wrongGuesses.forEach((mistake) => {
+        document.getElementById("img-container").src = "./images/" + wrongGuesses + ".jpg";})}
 
   if (wrongGuesses === maxWrong) {
       let gameOver = document.createElement("div");

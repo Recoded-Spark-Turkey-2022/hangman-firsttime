@@ -1,27 +1,16 @@
 body {
-    background-image: url("https://static.vecteezy.com/system/resources/previews/007/482/498/original/wild-west-cowboy-background-free-vector.jpg");
-
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/780/304/non_2x/wild-wild-west-cowboy-silhouette-canyon-background-free-vector.jpg");
     background-repeat: no-repeat;
-    background-size: cover; 
-   
+    background-size: cover;  
 }
-
-.row {
-    display: flex;
-    padding-top: 100px;
-  }
-
 
 .container {
-    margin: 20px auto;
-    width: 1000px;
-    
+    border: solid pink;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+    width: 40%;
+    padding: 50px;
   }
-
-.playagain {
-    display: flex;
-    justify-content: center;
-}
 
 #header {
     font-family: 'Merriweather Sans', sans-serif;
@@ -34,18 +23,27 @@ body {
     border: solid rgb(201, 124, 124);
     border-radius: 10px;
     box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
-      0 0 25px rgba(228, 15, 54, 0.911);
-    
-    
+      0 0 25px rgba(228, 15, 54, 0.911);   
 }
 
-.btns {
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 60px;
+  padding-top: 60px;
+}
+
+ .btns {
     background-color: rgba(227, 130, 113, 0);
     flex: 1;
     padding: 15px;
+    height: 450px;
     text-align: center;
     
-}
+} 
 
 .buttonBoxes {
     font-family: 'Merriweather Sans', sans-serif;
@@ -69,17 +67,13 @@ body {
 }
 
 .clicked {
-    background-color: grey;
+    background-color: rgba(116, 59, 59, 0.552);
     pointer-events: none;
 }
 
 .emptyBlanks {
-    background-color: rgb(184, 184, 20);
-    border-radius: 10px;
-    border-color: brown;
     display: contents;
     justify-content: center;
-    
 }
 
 .letterBlanks {
@@ -87,16 +81,14 @@ body {
     font-family: 'Shalimar', cursive;
     font-size: 35px;
     color: beige;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    border-radius: 10px;
     box-shadow: 1px 1px 2px white, 0 0 25px rgb(183, 113, 15),
       0 0 25px rgba(228, 15, 54, 0.911);
-      padding-bottom: 20px;
-      padding-top: 20px;
-    
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 #entrance {
@@ -109,7 +101,6 @@ body {
     z-index: 10;
     display: flex;
     justify-content: center;
-  
   }
 
   #enter {
@@ -125,51 +116,79 @@ body {
   }
 
   .img-container {
-    height: 600px;
-    width: 600px;
-    display: inline-block;
-  }
-  
-  img {
-    height: 120px;
-    width: 120px;
-    display: inline-block;
+    border: solid pink;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(143, 29, 29), 0 0 25px pink, 0 0 25px rgba(202, 140, 5, 0.716);
+    width: 40%;
+    padding: 50px;
   }
 
+  .imgDiv {
+    text-align: center;
+  }
 
   #img1 {
-   display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img2 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img3 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img4 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img5 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img6 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img7 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img8 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
   #img9 {
-    display: inline-block;
+    height: 160px;
+    width: 160px;
   }
   
+
+  #re {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 20px;
+    cursor: pointer;
+    background-color: rgb(0, 170, 200);
+    border: solid pink;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px white, 0 0 25px pink, 0 0 25px red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-family: "Shalimar", cursive;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 35px;
+}
