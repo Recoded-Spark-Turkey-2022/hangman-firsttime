@@ -67,14 +67,22 @@ letters.forEach((letter, index) => {
 
   
     
-        const button = document.getElementById('enter');
-        button.addEventListener('click', function (e) {
-          document.getElementById('entrance').style.display = "none";
-        })
-        button.addEventListener("mouseover", function () {
-          button.style.cursor = "pointer";
-        })
+        // const button = document.getElementById('enter');
+        // button.addEventListener('click', function (e) {
+        //   document.getElementById('entrance').style.display = "none";
+        // })
+        // button.addEventListener("mouseover", function () {
+        //   button.style.cursor = "pointer";
+        // })
    
+        // let helpbtn = document.querySelector(".needHelp");
+        // helpbtn.addEventListener("click",(e)=> {
+        //   let hintContainer = document.querySelector(".btns");
+        //   let hint = document.createElement('span');
+        //   hint.innerText = "_______";
+        //   hint.setAttribute("class","hint");
+        //   hintContainer.appendChild(hint);
+        // })
   
 
 
