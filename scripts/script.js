@@ -34,6 +34,10 @@ function returnDefinition() {
         
       
     let needHelpbtn = document.querySelector('.needHelp').addEventListener('click', () => {
+      let wordDefinition = document.createElement('span');
+      let hint = document.querySelector(".hint");
+      wordDefinition.innerText = singleWordDefinition;
+      hint.appendChild(wordDefinition);
           console.log(singleWordDefinition)
       });})};
   returnDefinition();
