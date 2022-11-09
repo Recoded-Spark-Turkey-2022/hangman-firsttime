@@ -30,10 +30,15 @@ function generateAlphabet() {
 function returnDefinition() {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${words}`)
     .then(response => {return response.json();})
-    .then(word => {
-        var singleWordDefinition = word[0].meanings[0].definitions[0].definition;
-        console.log(singleWordDefinition);})};
+    .then(word => {singleWordDefinition = word[0].meanings[0].definitions[0].definition;
+        
+      
+    let needHelpbtn = document.querySelector('.needHelp').addEventListener('click', () => {
+          console.log(singleWordDefinition)
+      });})};
   returnDefinition();
+
+ 
 
   letters.forEach(() => {
     let emptyBlanks = document.createElement("span");
@@ -71,11 +76,6 @@ letters.forEach((letter, index) => {
   });});}
 
 
-
-
-
-
-
       function restart() {
         window.location.reload();}
 
@@ -89,15 +89,7 @@ letters.forEach((letter, index) => {
         //   button.style.cursor = "pointer";
         // })
    
-        // let helpbtn = document.querySelector(".needHelp");
-        // helpbtn.addEventListener("click",(e)=> {
-        //   let hintContainer = document.querySelector(".btns");
-        //   let hint = document.createElement('span');
-        //   hint.innerText = "_______";
-        //   hint.setAttribute("class","hint");
-        //   hintContainer.appendChild(hint);
-        // })
-  
+        
 
 
 
