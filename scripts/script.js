@@ -77,18 +77,20 @@ letters.forEach((letter, index) => {
     gameOver();
     }
 
-
-    else{}
+    
+    else {}
+  
   });});
  
-// function gameOver(){
+function gameOver(){
     
-//   let div = document.createElement("div");
-//   let divText = document.createTextNode(`Game Over, The Word Is ${words}`);
-//   div.appendChild(divText);
-//   div.className = 'popup';
-//   document.body.appendChild(div);
-//   }
+  let div = document.createElement("div");
+  // let divText = document.createTextNode(`Seriously? You had 10 chances, The Word Is ${words}`);
+  // div.appendChild(divText);
+  div.className = 'gameOver';
+  document.body.appendChild(div);
+  }
+
 
 }
 
