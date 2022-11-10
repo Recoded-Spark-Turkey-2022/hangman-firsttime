@@ -88,8 +88,6 @@ function gameOver(){
   document.body.appendChild(div);
   }
 }
-
-
 function restart() {
   window.location.reload();}
 
