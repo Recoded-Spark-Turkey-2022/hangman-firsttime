@@ -72,13 +72,10 @@ letters.forEach((letter, index) => {
       let imgContainer = document.querySelector(".imgContainer");
       imgContainer.classList.add(`wrong-${wrongGuesses}`);}
 
-  if (wrongGuesses === maxWrong){
-     
-    gameOver();
-    }
+  if (wrongGuesses === maxWrong){gameOver();}
 
     
-    else {}
+  else {}
   
   });});
  
@@ -90,8 +87,6 @@ function gameOver(){
   div.className = 'gameOver';
   document.body.appendChild(div);
   }
-
-
 }
 
 
