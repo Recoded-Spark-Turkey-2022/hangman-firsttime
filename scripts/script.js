@@ -4,7 +4,7 @@ let clickedLetter;
 let damnData;
 let wordStatus;
 let wrongGuesses = 0;
-let maxWrong = 9;
+let maxWrong = 10;
 
 fetch(`https://random-word-api.herokuapp.com/word?number=1`)
   .then((res) => res.json())
@@ -44,7 +44,7 @@ function returnDefinition() {
 
  
 
-  letters.forEach(() => {
+letters.forEach(() => {
     let emptyBlanks = document.createElement("span");
     emptyBlanks.setAttribute("class", "emptyBlanks");
     emptyBlanks.innerHTML = " _ ";
@@ -67,21 +67,34 @@ letters.forEach((letter, index) => {
     span.innerText = clickedLetter;}});}});}
 
     
-
   if (wordStatus !== true) {
       wrongGuesses++;
       let imgContainer = document.querySelector(".imgContainer");
       imgContainer.classList.add(`wrong-${wrongGuesses}`);}
 
-  if (wrongGuesses === maxWrong) {
+  if (wrongGuesses === maxWrong){
      
+    gameOver();
     }
 
-  });});}
+
+    else{}
+  });});
+ 
+// function gameOver(){
+    
+//   let div = document.createElement("div");
+//   let divText = document.createTextNode(`Game Over, The Word Is ${words}`);
+//   div.appendChild(divText);
+//   div.className = 'popup';
+//   document.body.appendChild(div);
+//   }
+
+}
 
 
-      function restart() {
-        window.location.reload();}
+function restart() {
+  window.location.reload();}
 
   
     
